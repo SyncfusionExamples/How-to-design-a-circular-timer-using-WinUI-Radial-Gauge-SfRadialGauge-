@@ -1,6 +1,6 @@
 # How to design a circular timer using WinUI Radial Gauge SfRadialGauge
 
-This repository contains sample for how to add an image as a background using the [Syncfusion WinUi Radial Gauge](https://help.syncfusion.com/winui/radial-gauge/getting-started) control.
+This repository contains sample for how to design a circular timer using the [Syncfusion WinUi Radial Gauge](https://help.syncfusion.com/winui/radial-gauge/getting-started) control.
 
 Please refer the KB through this [link]().
 
