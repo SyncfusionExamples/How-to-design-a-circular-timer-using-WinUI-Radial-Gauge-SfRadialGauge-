@@ -1,0 +1,74 @@
+﻿<Window x:Class="CircularTimer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:CircularTimer"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gauge="using:Syncfusion.UI.Xaml.Gauges"
+        mc:Ignorable="d">
+
+    <gauge:SfRadialGauge x:Name="timerGauge">
+        <gauge:SfRadialGauge.Axes>
+            <gauge:RadialAxis StartAngle="270"
+                              EndAngle="270"
+                              Minimum="0"
+                              Maximum="60"
+                              ShowLabels="False"
+                              ShowTicks="False">
+                <gauge:RadialAxis.Pointers>
+                    <gauge:RangePointer x:Name="range"
+                                        Value="{Binding ElementName=pointer, Path=Value}"
+                                        EnableAnimation="True"
+                                        Background="Blue"
+                                        AnimationDuration="1000" />
+                    <gauge:ShapePointer x:Name="pointer"
+                                        Value="60"
+                                        EnableAnimation="True"
+                                        AnimationDuration="1000"
+                                        ShapeHeight="30"
+                                        ShapeWidth="30"
+                                        Stroke="Blue"
+                                        StrokeThickness="3"
+                                        ShapeType="Circle"
+                                        Fill="White" />
+                </gauge:RadialAxis.Pointers>
+                <gauge:RadialAxis.Annotations>
+                    <gauge:GaugeAnnotation PositionFactor="0.4"
+                                           DirectionValue="30"
+                                           DirectionUnit="AxisValue">
+                        <gauge:GaugeAnnotation.Content>
+                            <StackPanel>
+                                <TextBlock x:Name="play"
+                                           Tapped="play_pause_Tapped"
+                                           Visibility="Visible"
+                                           Foreground="Blue"
+                                           FontFamily="Segoe MDL2 Assets"
+                                           Text="&#xF5B0;"
+                                           FontSize="50"
+                                           FontWeight="ExtraBold" />
+                                <TextBlock x:Name="pause"
+                                           Tapped="play_pause_Tapped"
+                                           Visibility="Collapsed"
+                                           Foreground="Blue"
+                                           FontFamily="Segoe MDL2 Assets"
+                                           Text="&#xF8AE;"
+                                           FontSize="50"
+                                           FontWeight="ExtraBold" />
+                            </StackPanel>
+                        </gauge:GaugeAnnotation.Content>
+                    </gauge:GaugeAnnotation>
+                    <gauge:GaugeAnnotation PositionFactor="0.1"
+                                           DirectionValue="0"
+                                           DirectionUnit="AxisValue">
+                        <gauge:GaugeAnnotation.Content>
+                            <TextBlock x:Name="timer"
+                                       Text="01:00"
+                                       FontSize="80"
+                                       Foreground="Blue" />
+                        </gauge:GaugeAnnotation.Content>
+                    </gauge:GaugeAnnotation>
+                </gauge:RadialAxis.Annotations>
+            </gauge:RadialAxis>
+        </gauge:SfRadialGauge.Axes>
+    </gauge:SfRadialGauge>
+</Window>

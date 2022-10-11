@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CircularTimer (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "CircularTimer (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
