@@ -7,17 +7,15 @@
         xmlns:gauge="using:Syncfusion.UI.Xaml.Gauges"
         mc:Ignorable="d">
 
-    <gauge:SfRadialGauge x:Name="timerGauge">
+    <gauge:SfRadialGauge>
         <gauge:SfRadialGauge.Axes>
             <gauge:RadialAxis StartAngle="270"
                               EndAngle="270"
-                              Minimum="0"
                               Maximum="60"
                               ShowLabels="False"
                               ShowTicks="False">
                 <gauge:RadialAxis.Pointers>
-                    <gauge:RangePointer x:Name="range"
-                                        Value="{Binding ElementName=pointer, Path=Value}"
+                    <gauge:RangePointer Value="{Binding ElementName=pointer, Path=Value}"
                                         EnableAnimation="True"
                                         Background="Blue"
                                         AnimationDuration="1000" />
